@@ -1,4 +1,10 @@
 .counter {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
+
+  padding: .2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
