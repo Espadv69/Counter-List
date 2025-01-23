@@ -35,8 +35,10 @@ const CounterList = () => {
 
   return (
     <div>
-      <h2>Counter List</h2>
-      <button onClick={addCounter}>Add Counter</button>
+      <h1 className="h1-title">Counter List</h1>
+      <button className="button-addCounter" onClick={addCounter}>
+        Add Counter
+      </button>
 
       <div className="grid-container">
         {counters.map((counter) => (
