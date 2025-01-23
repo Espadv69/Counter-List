@@ -10,8 +10,21 @@
 }
 
 .button-addCounter {
+  padding: .3rem 1rem;
+
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+
   display: flex;
   justify-self: center;
+
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+
+  color: currentColor;
+  background: #0000005b;
 }
 
 .grid-container {
