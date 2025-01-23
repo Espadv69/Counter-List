@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Counter from './Counter'
+
+import '../css/CounterList.css'
 
 const CounterList = () => {
   const [counters, setCounters] = useState([])
@@ -13,16 +15,16 @@ const CounterList = () => {
   const incrementCounter = (id) => {
     setCounters(
       counters.map((counter) =>
-        counter.id === id ? { ...counter, value: counter.value + 1 } : counter,
-      ),
+        counter.id === id ? { ...counter, value: counter.value + 1 } : counter
+      )
     )
   }
 
   const resetCounter = (id) => {
     setCounters(
       counters.map((counter) =>
-        counter.id === id ? { ...counter, value: 0 } : counter,
-      ),
+        counter.id === id ? { ...counter, value: 0 } : counter
+      )
     )
   }
 
@@ -36,7 +38,7 @@ const CounterList = () => {
       <h2>Counter List</h2>
       <button onClick={addCounter}>Add Counter</button>
 
-      <div>
+      <div className="grid-container">
         {counters.map((counter) => (
           <Counter
             key={counter.id}
