@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Counter = ({ id, onReset, onIncrement }) => {
+const Counter = ({ id, onReset, onIncrement, onDelete }) => {
   const [count, setCount] = useState(0)
 
   const handleIncrement = () => {
@@ -13,6 +13,10 @@ const Counter = ({ id, onReset, onIncrement }) => {
     onReset(id)
   }
 
+  const handleDelete = () => {
+    onDelete(id)
+  }
+
   return (
     <div className="counter">
       <h3 className="h3-counter">Counter {id}</h3>
@@ -22,6 +26,9 @@ const Counter = ({ id, onReset, onIncrement }) => {
       </button>
       <button className="button-counter" onClick={handleReset}>
         Reset
+      </button>
+      <button className="button-counter" onClick={handleDelete}>
+        Delete Counter
       </button>
     </div>
   )
