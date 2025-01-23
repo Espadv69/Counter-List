@@ -25,4 +25,24 @@ const CounterList = () => {
       )
     )
   }
+
+  return (
+    <div>
+      <h2>Counter List</h2>
+      <button onClick={addCounter}>Add Counter</button>
+
+      <div>
+        {counters.map((counter) => (
+          <Counter
+            key={counter.id}
+            id={counter.id}
+            onReset={resetCounter}
+            onIncrement={incrementCounter}
+          />
+        ))}
+      </div>
+    </div>
+  )
 }
+
+export default CounterList
