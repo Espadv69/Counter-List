@@ -10,6 +10,14 @@ const CounterList = () => {
     setNextId((nextId) => nextId + 1)
   }
 
+  const incrementCounter = (id) => {
+    setCounters(
+      counters.map((counter) =>
+        counter.id === id ? { ...counter, value: counter.value + 1 } : counter
+      )
+    )
+  }
+
   const resetCounter = (id) => {
     setCounters(
       counters.map((counter) =>
