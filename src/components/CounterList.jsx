@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Counter from './Counter'
 
 const CounterList = () => {
@@ -26,6 +26,11 @@ const CounterList = () => {
     )
   }
 
+  const deleteCounter = (id) => {
+    const filteredCounter = counters.filter((counter) => counter.id !== id)
+    setCounters(filteredCounter)
+  }
+
   return (
     <div>
       <h2>Counter List</h2>
@@ -38,6 +43,7 @@ const CounterList = () => {
             id={counter.id}
             onReset={resetCounter}
             onIncrement={incrementCounter}
+            onDelete={deleteCounter}
           />
         ))}
       </div>
