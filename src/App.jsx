@@ -1,5 +1,7 @@
+import CounterList from './components/CounterList'
+
 const App = () => {
-  return <h1>hello, world</h1>
+  return <CounterList />
 }
 
 export default App
