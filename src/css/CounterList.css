@@ -1,3 +1,19 @@
+.h1-title {
+  margin: .5rem auto;
+  padding: 1rem;
+
+  width: 100%;
+  max-width: 350px;
+
+  text-align: center;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.button-addCounter {
+  display: flex;
+  justify-self: center;
+}
+
 .grid-container {
   margin: 1rem auto;
   padding: .3rem;
