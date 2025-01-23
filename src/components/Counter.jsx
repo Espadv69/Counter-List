@@ -31,7 +31,7 @@ const Counter = ({ id, onReset, onIncrement, onDelete }) => {
           Reset
         </button>
         <button className="button-counter" onClick={handleDelete}>
-          Delete Counter
+          Delete
         </button>
       </div>
     </div>
